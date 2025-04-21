@@ -1,0 +1,9 @@
+- name: Windowsi masinate haldus
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Kuva masina hostname
+      ansible.windows.win_command: hostname
+
+    - name: Kuva operatsioonisüsteemi versioon
+      ansible.windows.win_command: systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
