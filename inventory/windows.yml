@@ -1,0 +1,19 @@
+all:
+  hosts:
+    winserver:
+      ansible_host: 10.0.24.20
+      ansible_user: ansibleadmin
+      ansible_password: TugevParool123!
+      ansible_connection: winrm
+      ansible_port: 5985
+      ansible_winrm_transport: basic
+      ansible_winrm_server_cert_validation: ignore
+
+    winklient:
+      ansible_host: 10.0.24.10
+      ansible_user: ansibleadmin
+      ansible_password: TugevParool123!
+      ansible_connection: winrm
+      ansible_port: 5985
+      ansible_winrm_transport: basic
+      ansible_winrm_server_cert_validation: ignore
